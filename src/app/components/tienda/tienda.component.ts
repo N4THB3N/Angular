@@ -13,6 +13,10 @@ export class TiendaComponent{
     constructor(){
         this.titulo = 'This is my very first store';
     }
+
+    mostrarNombre(){
+        console.log(this.nombreDeUbicacion);
+    }
 }
 
 //dsdfsdf

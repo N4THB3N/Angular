@@ -7,7 +7,14 @@ Padre:
 </ul>
 <p>
     Nombre de ubicacion:
-    <input type="text" [(ngModel)]="nombredeUbicacion">
+    <input type="text" [(ngModel)]="nombredeUbicacion" (keyup)="mostrarNombre()">
+</p>
+<p>
+        Resultado: {{nombredeUbicacion}}
 </p>
 Hijo:
-<ubicacion></ubicacion>
+<p *ngIf="nombredeUbicacion">
+<ubicacion *ngIf="nombredeUbicacion" [nombre]="nombredeUbicacion";>
+    
+</ubicacion>
+</p>

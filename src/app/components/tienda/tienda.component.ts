@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'tienda',
@@ -9,13 +9,18 @@ import { Component } from '@angular/core';
 export class TiendaComponent{
     public titulo; 
     public nombreDeUbicacion: string;
+    public ubicacion;
 
     constructor(){
-        this.titulo = 'This is my very first store';
+        this.titulo = 'Project way';
     }
 
     mostrarNombre(){
         console.log(this.nombreDeUbicacion);
+    }
+
+    verDatosUbicacion(event){
+        this.ubicacion = event;
     }
 }
 

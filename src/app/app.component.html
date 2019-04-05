@@ -3,5 +3,7 @@
 <app-navbar></app-navbar>
 
 <p *ngIf="correo">Bienvenido: {{correo}}</p>
+
+<button class="form-control col-md-1" (click)="eliminarCorreo()">Clean</button>
   
 <router-outlet></router-outlet>

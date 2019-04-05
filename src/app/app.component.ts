@@ -16,4 +16,9 @@ export class AppComponent implements OnInit{
   ngDoCheck(){
     this.correo = localStorage.getItem('correo');
   }
+
+  eliminarCorreo(){
+    localStorage.removeItem('correo');
+    alert(localStorage.getItem('correo'));
+  }
 }

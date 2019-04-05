@@ -1,14 +1,7 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    
-  </h1>
+<!-- Navbar -->
 
-  <tienda></tienda>
-  <ubicacion></ubicacion>
+<app-navbar></app-navbar>
 
-</div>
-<h2>Some links for you: </h2>
-
-
+<p *ngIf="correo">Bienvenido: {{correo}}</p>
+  
 <router-outlet></router-outlet>

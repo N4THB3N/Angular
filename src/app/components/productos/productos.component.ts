@@ -20,6 +20,7 @@ export class ProductosComponent implements OnInit {
   getTeachers(){
     this.rest.getTeachers().subscribe(res => {
       console.log(res);
+      this.teachers = res.admin;
     });
   }
 

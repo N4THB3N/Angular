@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'
+import { HttpClientModule } from "@angular/common/http"
 
 import { AppRoutingModule } from './app-routing.module';
 // Components
@@ -13,6 +14,7 @@ import { ContactoComponent } from './components/contacto/contacto.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { RestService } from './services/rest.service'
 
 
 @NgModule({
@@ -30,9 +32,10 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [RestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

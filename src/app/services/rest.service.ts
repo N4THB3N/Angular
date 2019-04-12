@@ -23,7 +23,7 @@ export class RestService {
   }
 
   getTeachers(): Observable<any>{
-    return this.http.get(this.endpoint + '/teachers').pipe(
+    return this.http.get(this.endpoint + '/listAdmin').pipe(
       map(this.extractData));
   }
 }

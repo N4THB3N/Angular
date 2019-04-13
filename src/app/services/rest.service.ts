@@ -12,7 +12,9 @@ export class RestService {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
     })
-  }
+  };
+
+  mensaje = 'Ejecutando el guardar teacher';
 
 
   constructor(private http: HttpClient) { }
@@ -25,5 +27,13 @@ export class RestService {
   getTeachers(): Observable<any>{
     return this.http.get(this.endpoint + '/listAdmin').pipe(
       map(this.extractData));
+  }
+
+  setTeacher(teacher_guardar){
+     console.log(this.mensaje);
+     var params = JSON.stringify(teacher_guardar);
+     return this.http.post(this.endpoint + 'saveTeacherIn', params, this.httpOptions).pipe(
+       map(res => JSON)
+     );
   }
 }
